@@ -1,0 +1,10 @@
+<project>
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>de.quoss.activemq.artemis</groupId>
+    <artifactId>projects</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
+    <modules>
+        <module>activemq-artemis-send-message</module>
+    </modules>
+</project>
