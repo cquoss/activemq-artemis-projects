@@ -1,2 +1,6 @@
 # activemq-artemis-projects
-Java example projects showing ActiveMQ Artemis functionaöity.
+
+## Description
+
+Java example projects showing ActiveMQ Artemis functionality.
+
