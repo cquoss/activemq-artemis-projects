@@ -8,6 +8,7 @@ import org.apache.activemq.artemis.api.core.client.ClientConsumer;
 import org.apache.activemq.artemis.api.core.client.ClientMessage;
 import org.apache.activemq.artemis.api.core.client.ClientSession;
 import org.apache.activemq.artemis.api.core.client.ClientSession.AddressQuery;
+import org.bouncycastle.crypto.ec.ECNewPublicKeyTransform;
 import org.apache.activemq.artemis.api.core.client.ClientSessionFactory;
 import org.apache.activemq.artemis.api.core.client.ServerLocator;
 import org.slf4j.Logger;
@@ -17,9 +18,9 @@ public class SubOne {
 
 	private static final Logger LOGGER = LoggerFactory.getLogger(SubOne.class);
 	
-	private static final String ADDRESS_NAME = "pub-0";
+	private static final String ADDRESS_NAME = "pub-1";
 	
-	private static final String QUEUE_NAME = "sub-1";
+	private static final String QUEUE_NAME = "pub-1-sub-1";
 	
 	public static void main(String[] args) throws Exception {
         final ServerLocator locator = ActiveMQClient.createServerLocator("tcp://localhost:61616");
@@ -46,6 +47,9 @@ public class SubOne {
         				LOGGER.info("(main) No message received.");
         			} else {
         				LOGGER.info("(main) Message {} received.", message);
+        				LOGGER.info("(main) Message Data Buffer Capacity: {}", message.getDataBuffer().capacity());
+        				LOGGER.info("(main) Message Data Buffer Readable Bytes: {}", message.getDataBuffer().readableBytes());
+        				LOGGER.info("(main) Message Data Buffer Content: {}", message.getDataBuffer().readNullableSimpleString());
         				message.acknowledge();
         			}
                 	session.commit();

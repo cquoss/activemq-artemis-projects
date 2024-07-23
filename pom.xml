@@ -1,15 +1,16 @@
-<project>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>de.quoss.activemq.artemis</groupId>
-    <artifactId>projects</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <artifactId>activemq-artemis-projects-root</artifactId>
+    <version>1.0</version>
     <packaging>pom</packaging>
     <properties>
         <artemis.version>2.35.0</artemis.version>
-	<logback.version>1.5.6</logback.version>
-	<maven.compiler.release>21</maven.compiler.release>
-	<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-	<slf4j.version>2.0.13</slf4j.version>
+	    <logback.version>1.5.6</logback.version>
+	    <maven.compiler.release>21</maven.compiler.release>
+	    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	    <slf4j.version>2.0.13</slf4j.version>
     </properties>
     <modules>
         <module>activemq-artemis-publish-subscribe</module>
